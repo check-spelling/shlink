@@ -1,0 +1,21 @@
+# See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
+
+# microsoft
+\b(?:https?://|)(?:(?:download(?:\.visualstudio|)|docs|msdn2?)\.microsoft|blogs\.msdn)\.com/[-_a-zA-Z0-9()=./%]*
+# powerbi
+\bapp\.powerbi\.com/reportEmbed/[^"' ]*
+
+# shields.io
+\bshields\.io/[-\w/%?=&.]*
+
+# hex digits including css/html color classes:
+(?:[\\0][xX]|\\u|[uU]\+|#x?|\%23)[0-9a-fA-FgGrR_]{2,}(?:[uUlL]{0,3}|u\d+)\b
+
+"jwt": ".*"
+
+# acceptable duplicates
+\s(long|LONG) \g{-1}\s
+\@param\s+(\w+)\s+\g{-1}\s
+
+# ignore long runs of a single character:
+\b([A-Za-z])\g{-1}{3,}\b
